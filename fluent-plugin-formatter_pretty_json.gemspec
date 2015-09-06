@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-formatter_pretty_json"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Yoshihiro MIYAI"]
   spec.email         = ["msparrow17@gmail.com"]
 
