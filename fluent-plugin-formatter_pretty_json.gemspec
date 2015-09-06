@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["msparrow17@gmail.com"]
 
   spec.summary       = %q{Fluentd formatter plugin pretty json.}
-  spec.description   = %q{Fluentd formatter plugin formatting line to pretty json.}
+  spec.description   = %q{Fluentd formatter plugin for formatting record to pretty json.}
   spec.homepage      = "https://github.com/mia-0032/fluent-plugin-formatter_pretty_json"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
