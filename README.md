@@ -32,6 +32,19 @@ Like below:
 </match>
 ```
 
+Output is like below:
+
+```
+{
+  "foo": "bar",
+  "test": "hoge"
+}
+{
+  "foo": "bar",
+  "test": "hoge"
+}
+```
+
 Also you can use `include_time_key`, `time_key`, `time_format`,
 `include_tag_key`, `tag_key`, `localtime`, `timezone` parameters.
 
