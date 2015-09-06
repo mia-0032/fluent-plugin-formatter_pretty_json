@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Fluentd formatter plugin pretty json.}
   spec.description   = %q{Fluentd formatter plugin for formatting record to pretty json.}
   spec.homepage      = "https://github.com/mia-0032/fluent-plugin-formatter_pretty_json"
+  spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
