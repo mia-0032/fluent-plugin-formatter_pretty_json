@@ -6,14 +6,15 @@ require 'fluent/plugin/formatter_pretty_json'
 
 class PrettyJsonFormatterTest < ::Test::Unit::TestCase
   def setup
-    @formatter = Fluent::Plugin.new_formatter('pretty_json')
     @time = Fluent::Engine.now
   end
 
+  def create_driver(conf={})
+    Fluent::Test::FormatterTestDriver.new(Fluent::TextFormatter::PrettyJsonFormatter).configure(conf)
+  end
+
   def configure(conf)
-    @formatter.configure(
-        Fluent::Config::Element.new('ROOT', '', {}.merge(conf), [])
-        )
+    @formatter = create_driver(conf)
   end
 
   def test_format
