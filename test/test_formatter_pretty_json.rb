@@ -2,6 +2,7 @@
 
 require_relative 'helper'
 require 'fluent/formatter'
+require 'fluent/test/driver/formatter'
 require 'fluent/plugin/formatter_pretty_json'
 
 class PrettyJsonFormatterTest < ::Test::Unit::TestCase
@@ -10,7 +11,7 @@ class PrettyJsonFormatterTest < ::Test::Unit::TestCase
   end
 
   def create_driver(conf={})
-    Fluent::Test::FormatterTestDriver.new(Fluent::TextFormatter::PrettyJsonFormatter).configure(conf)
+    Fluent::Test::Driver::Formatter.new(Fluent::Plugin::PrettyJsonFormatter).configure(conf)
   end
 
   def configure(conf)
@@ -22,7 +23,7 @@ class PrettyJsonFormatterTest < ::Test::Unit::TestCase
     tag = 'foo.bar'
     record = {"a" => "1", "b" => "2"}
 
-    formatted = @formatter.format(tag, @time, record)
+    formatted = @formatter.instance.format(tag, @time, record)
     assert_equal("{\n  \"a\": \"1\",\n  \"b\": \"2\"\n}\n", formatted)
   end
 end

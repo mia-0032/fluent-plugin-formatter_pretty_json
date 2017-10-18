@@ -1,12 +1,10 @@
 # coding: utf-8
+require 'fluent/plugin/formatter'
 
 module Fluent
-  module TextFormatter
+  module Plugin
     class PrettyJsonFormatter < Formatter
-      Plugin.register_formatter('pretty_json', self)
-
-      include Configurable
-      include HandleTagAndTimeMixin
+      Fluent::Plugin.register_formatter('pretty_json', self)
 
       def configure(conf)
         super
