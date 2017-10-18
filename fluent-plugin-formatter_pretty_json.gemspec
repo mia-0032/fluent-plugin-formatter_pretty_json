@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "test-unit"
 
-  spec.add_runtime_dependency "fluentd", ">= 0.12.0"
+  spec.add_runtime_dependency "fluentd", ">= 0.14.0"
 end
