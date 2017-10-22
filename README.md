@@ -4,6 +4,13 @@
 
 [Fluentd](http://www.fluentd.org/) formatter plugin for formatting record to pretty json.
 
+## Requirements
+
+| fluent-plugin-formatter_pretty_json | fluentd | ruby |
+|------------------------|---------|------|
+| >= 1.0.0 | >= v0.14.0 | >= 2.1 |
+|  < 1.0.0 | >= v0.12.0 | >= 1.9 |
+
 ### Installation
 
 Install by gem:
