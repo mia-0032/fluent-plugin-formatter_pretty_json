@@ -7,3 +7,4 @@
 /pkg/
 /test/reports/
 /tmp/
+.ruby-version
